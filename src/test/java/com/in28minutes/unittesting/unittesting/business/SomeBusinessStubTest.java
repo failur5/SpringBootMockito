@@ -11,6 +11,12 @@ class SomeDataServiceStub implements SomeDataService {
 	public int[] retrieveAllData() {
 		return new int[] { 1, 2, 3 };
 	}
+
+	@Override
+	public String[] getRandomNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 class SomeDataServiceEmptyStub implements SomeDataService {
@@ -18,12 +24,24 @@ class SomeDataServiceEmptyStub implements SomeDataService {
 	public int[] retrieveAllData() {
 		return new int[] { };
 	}
+
+	@Override
+	public String[] getRandomNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 class SomeDataServiceOneElementStub implements SomeDataService {
 	@Override
 	public int[] retrieveAllData() {
 		return new int[] { 5 };
+	}
+
+	@Override
+	public String[] getRandomNames() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 

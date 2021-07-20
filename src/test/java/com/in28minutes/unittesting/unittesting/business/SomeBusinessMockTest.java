@@ -37,4 +37,22 @@ public class SomeBusinessMockTest {
 		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 5 });
 		assertEquals(5, business.calculateSumUsingDataService());
 	}
+
+	@Test
+	public void countNamesHavingLengthGreater3_NormalCase() {
+		when(dataServiceMock.getRandomNames()).thenReturn(new String[] { "manish", "wo", "ersd" });
+		assertEquals(2, business.getCountOfNamesLengthGreatearThan3());
+	}
+
+	@Test
+	public void countNamesHavingLengthGreater3_Empty() {
+		when(dataServiceMock.getRandomNames()).thenReturn(new String[] {});
+		assertEquals(0, business.getCountOfNamesLengthGreatearThan3());
+	}
+
+	@Test
+	public void countNamesHavingLengthGreater3_Single() {
+		when(dataServiceMock.getRandomNames()).thenReturn(new String[] { "manish" });
+		assertEquals(1, business.getCountOfNamesLengthGreatearThan3());
+	}
 }
