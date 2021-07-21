@@ -1,4 +1,4 @@
-package com.in28minutes.unittesting.unittesting.spike;
+ package com.in28minutes.unittesting.unittesting.spike;
 
 import static org.hamcrest.CoreMatchers.everyItem;
 import static org.hamcrest.CoreMatchers.hasItems;

@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import com.in28minutes.unittesting.unittesting.model.Item;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 
@@ -33,6 +34,37 @@ public class JsonPathTest {
 		System.out.println(context.read("$.[?(@.name=='Eraser')]").toString());
 		System.out.println(context.read("$.[?(@.quantity==5)]").toString());
 		
+		
+	}
+	
+	@Test
+	public void learningByMySelf() {
+		String responseFromService = "{\r"
+				+ "	\"name\":\"Manish\",\r"
+				+ "	\"roll\":45,\r"
+				+ "	\"mark\":90\r"
+				+ "}";
+		
+		DocumentContext context = JsonPath.parse(responseFromService);
+		
+		 System.out.println(context.read("$").toString());
+		 System.out.println(context.read("$[?(@.name=='Manis')]").toString());
+
+		//assertThat(ids).containsExactly(10000,10001,10002);
+		
+		//System.out.println(context.read("$.[1]").toString());
+		//System.out.println(context.read("$.[0:2]").toString());
+		//System.out.println(context.read("$.[?(@.name=='Eraser')]").toString());
+		//System.out.println(context.read("$.[?(@.quantity==5)]").toString());
+		
+		
 	}
 
 }
+
+
+
+
+
+
+
